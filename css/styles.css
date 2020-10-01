@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Lato:wght@300&display=swap');
+
+:root {
+	--font: 'Lato', sans-serif;
+	--font-title: 'Barlow', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+/* Main Styles */
+body {
+	background: #fdde7e;
+	color: #333;
+	font: 20px var(--font);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.plan {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+	margin: 15px;
+	text-align: center;
+	flex-basis: 360px;
+	padding: 30px;
+	cursor: pointer;
+}
+
+.plan:nth-child(2) {
+	padding: 50px 30px;
+}
+
+.plan__price {
+	color: #02995b;
+	font: 600 50px var(--font-title);
+	margin-bottom: 20px;
+}
+
+.plan__title {
+	margin-bottom: 25px;
+	font: 400 50px var(--font-title);
+	letter-spacing: -1.5px;
+}
+
+.plan img {
+	max-width: 135px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+.plan:nth-child(2) .plan__price,
+.plan:nth-child(2) img {
+	margin-bottom: 40px;
+}
+
+.plan:hover {
+	animation: shake .8s ease-in-out;
+}
+  
+@keyframes shake {
+	10%, 90% {
+		transform: translateX(-1px);
+	}
+	
+	20%, 80% {
+		transform: translateX(2px);
+	}
+  
+	30%, 50%, 70% {
+		transform: translateX(-4px);
+	}
+  
+	40%, 60% {
+		transform: translateX(4px);
+	}
+}
